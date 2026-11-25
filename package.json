@@ -1,0 +1,23 @@
+{
+  "name": "magpie-xingchi-renew",
+  "version": "0.1.2",
+  "description": "Xingchi session renewal: reshapes long sessions into fresh ones before the station's 100-turn / 10-turn per-session caps hit.",
+  "type": "module",
+  "license": "MIT",
+  "magpie": {
+    "name": "星驰会话续命",
+    "summary": {
+      "zh": "星驰单会话 100 轮/10 轮上限前自动续命：截断早期上下文，让本站认作新会话。",
+      "en": "Renews Xingchi sessions before the 100-turn / 10-turn per-session caps by trimming early context."
+    },
+    "hooks": "./renew.hooks.js",
+    "options": {
+      "renewAt": 90,
+      "maxItems": 150,
+      "maxUserTurns": 9,
+      "maxAssistantMsgs": 80,
+      "keepTurns": 8,
+      "maxRenewedItems": 80
+    }
+  }
+}
